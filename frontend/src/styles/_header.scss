@@ -1,0 +1,64 @@
+@use "variables" as *;
+@use "global";
+
+header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: $background-color;
+  border-bottom: 1px solid $border-color;
+
+  .logo-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+
+    .logo {
+
+      width: 100px;
+      height: 100px;
+
+      @media (max-width: 768px) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    h1 {
+      font-family: $font-display;
+      font-size: 2rem;
+      margin: 0;
+      white-space: nowrap;
+
+      @media (max-width: 768px) {
+        font-size: 1.6rem;
+      }
+    }
+
+  }
+
+  .logout-btn {
+
+    background-color: $secondary-color;
+    color: $text-color;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+
+    svg {
+      font-size: 0.75rem;
+    }
+  }
+}

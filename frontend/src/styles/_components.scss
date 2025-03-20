@@ -1,0 +1,132 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use "sass:color";
+
+.btn {
+  @include button-base;
+  font-size: 1rem;
+
+  &-primary {
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+      background-color: color.adjust($primary-color, $lightness: -10%);   
+    }
+  }
+
+  &-secondary {
+    background-color: $secondary-color;
+    color: white;
+
+    &:hover {
+      background-color: color.adjust($primary-color, $lightness: -10%);
+    }
+  }
+
+  &:disabled {
+    background-color: $disabled-color;
+    cursor: not-allowed;
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  .input-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $text-color;
+  }
+
+  .input-field {
+    padding: 20px;
+    font-size: 1rem;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    transition: border 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+
+    &:focus {
+      border-color: $focus-color;
+      outline: none;
+    }
+  }
+}
+
+
+.left-panel,
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.navigation-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  button {
+    @include button-base;
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+      background-color: color.adjust($primary-color, $lightness: -10%);
+    }
+  }
+}
+
+.center-panel-campaign,
+.center-panel-dashboard {
+  display: flex;
+  flex-direction: column;
+
+  button {
+    margin: 0.5rem;
+    width: 40vh;
+    height: 20vh;
+  }
+}
+
+.new-entity {
+  button {
+    width: 20vh;
+    height: 20vh;
+  }
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+
+  button {
+    @include button-base;
+    font-size: 1rem;
+
+    &:first-child {
+      background: #4caf50;
+      color: $text-color;
+
+      &:hover {
+        background: color.adjust(#4caf50, $lightness: -10%);
+      }
+    }
+
+    &:last-child {
+      background: #e53935;
+      color: $text-color;
+
+      &:hover {
+        background: color.adjust(#4caf50, $lightness: -10%);
+      }
+    }
+  }
+}

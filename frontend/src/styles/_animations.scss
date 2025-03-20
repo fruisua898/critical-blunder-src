@@ -1,0 +1,113 @@
+@use 'variables' as *;
+$animation-duration: 0.3s;
+$animation-ease: ease-in-out;
+$final-button-color: $primary-color;
+
+@keyframes button-pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@mixin fade-in($duration: 0.5s, $ease: ease-in) {
+    opacity: 0;
+    animation: fadeIn $duration $ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@mixin fade-in($duration: 0.5s, $ease: ease-in) {
+    opacity: 0;
+    animation: fadeIn $duration $ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.center-panel-campaign,
+.center-panel-dashboard {
+    animation: campaignPanelAnimation 1s ease-out forwards;
+}
+
+@keyframes campaignPanelAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px) rotate(-5deg);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translateX(10px) rotate(3deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0);
+    }
+}
+
+.dashboard-left,
+.dashboard-right {
+    button {
+
+        background-color: white;
+        color: #fff;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        cursor: pointer;
+        animation: dashboardButtonAnimation 3s ease-out forwards;
+    }
+}
+
+@keyframes dashboardButtonAnimation {
+    0% {
+        opacity: 0.2;
+        transform: scale(0.8);
+        background-color: white;
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.1);
+        background-color: $final-button-color;
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: $final-button-color;
+    }
+}
+
+.logo {
+    animation: logoZoom 1.2s ease-out forwards;
+}
+
+@keyframes logoZoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

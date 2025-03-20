@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+.back-mobile {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: $text-color;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,50 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'components';
+@use "sass:color"; 
+
+.nav-bar,
+.new-entity {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+
+  button {
+    @include button-base;
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+      background-color: color.adjust($primary-color, $lightness: -10%); 
+    }
+  }
+}
+
+.right-panel {
+  width: 100%;
+
+  .right-panel-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+
+    button {
+      @include button-base;
+      height: 60px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      background-color: $primary-color;
+      color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background-color: color.adjust($primary-color, $lightness: -10%);      
+      }
+    }
+  }
+}
