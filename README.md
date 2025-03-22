@@ -64,6 +64,7 @@ Proyecto desarrollado para el Grado Superior en Desarrollo de Aplicaciones Web, 
     - npm run dev -- --host
 5. Acceder desde el navegador a `http://localhost:5173` o la URL que nos devuelva la consola.
 
+```
 ## 📁 Estructura del proyecto
 
 critical-blunder/
@@ -81,7 +82,7 @@ critical-blunder/
 │   
 └── sql/
     └── init.sql
-
+```
 
 ## Notas
 
