@@ -59,10 +59,12 @@ Proyecto desarrollado para el Grado Superior en Desarrollo de Aplicaciones Web, 
     - VITE_BASE_URL=http://localhost:8080/api 
     - Cambiar por el dominio donde tengamos el back seguido de /api
 3. Instalar dependencias:
+     ```bash
     - npm install
-4. Ejecutar el servidor de desarrollo:
+5. Ejecutar el servidor de desarrollo:
+     ```bash
     - npm run dev -- --host
-5. Acceder desde el navegador a `http://localhost:5173` o la URL que nos devuelva la consola.
+6. Acceder desde el navegador a `http://localhost:5173` o la URL que nos devuelva la consola.
 
 ```
 ## 📁 Estructura del proyecto
