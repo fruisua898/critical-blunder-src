@@ -60,10 +60,10 @@ Proyecto desarrollado para el Grado Superior en Desarrollo de Aplicaciones Web, 
     - Cambiar por el dominio donde tengamos el back seguido de /api
 3. Instalar dependencias:
      ```bash
-    - npm install
+     npm install
 5. Ejecutar el servidor de desarrollo:
      ```bash
-    - npm run dev -- --host
+     npm run dev -- --host
 6. Acceder desde el navegador a `http://localhost:5173` o la URL que nos devuelva la consola.
 
 ```
